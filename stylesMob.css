@@ -1,0 +1,831 @@
+/*
+
+
+    font-family: 'Cabin', sans-serif;
+
+    font-family: 'Quicksand', sans-serif;
+
+    font-family: 'Rubik', sans-serif;
+
+
+*/
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+}
+
+body {
+    max-width: 100%;
+    background-color: #000;
+}
+
+ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 20%;
+    list-style: none;
+    padding: .5em;
+}
+
+/* SHARE ICONS */
+
+header {
+    max-width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.reveal {
+    display: none;
+}
+
+.mobileDiv {
+    width: 100%;
+    height: 75px;
+    background: black;
+    position: fixed;
+    z-index: 5;
+    top: 0;
+}
+
+.mobileMenu {
+    display: block;
+    color: slategrey;
+}
+
+#mainNav {
+    display: none;
+    flex-direction: row;
+    justify-content: space-around;
+    position: fixed;
+    top: 70px;
+    width: 100%;
+    height: auto;
+    background: black;
+    font-family: 'Rubik', sans-serif;
+    z-index: 2;
+}
+
+.navUL {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.shareUL {
+    display: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+
+.navLinks {
+
+    height: auto;
+    margin: .5em;
+}
+
+.navLinks a {
+    text-decoration: none;
+    font-size: 1.5em;
+    color: #adadad;
+    text-transform: uppercase;
+}
+
+.reveal {
+    display: none;
+}
+
+.wrap {
+    width: 100%;
+    height: 100vh;
+    display: block;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url(img/coverminBlur.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.heroImg {
+    width: 100%;
+    height: 100%;
+}
+
+.background {
+    display: none;
+}
+
+.infoCard {
+    display: block;
+    width: 100%;
+    height: 75%;
+    position: static;
+    background-image: url(img/covermin.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: 100px;
+    z-index: 0;
+}
+
+main {
+    width: 100%;
+    height: auto;
+    z-index: auto;
+}
+
+.aboutArticle:before {
+    content: '';
+    display: inline-block;
+    vertical-align: top;
+    height: 100%;
+}
+
+.aboutArticle {
+    width: 100%;
+    height: 100%;
+    background-color: #07462b;
+    background-image: url(img/droneMobileMin.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    padding-bottom: 2em;
+}
+
+.aboutCard {
+    display: inline-block;
+    vertical-align: middle;
+    width: 90%;
+    margin-top: 60%;
+    background-color: #CDE7E1;
+    padding: 2em 1em;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    font-family: 'Cabin', sans-serif;
+    text-align: left;
+}
+
+.faqArticle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background-color: #333333;
+    background-image: url(img/hummingbirdMobileMin.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    padding-bottom: 2em;
+}
+
+.faqCard {
+    display: inline-block;
+    vertical-align: middle;
+    width: 90%;
+    height: auto;
+    background-color: #CDE7E1;
+    padding: 1em;
+    margin: auto;
+    margin-top: 70%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    font-family: 'Cabin', sans-serif;
+    text-align: left;
+    z-index: 0;
+}
+
+.faqCard ~ .faqCard {
+    width: 90%;
+    margin-top: 1em;
+}
+
+/* SHARE ICONS */
+
+.share {
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.5em;
+}
+
+.fa {
+    padding: .5em;
+    font-size: 2em;
+    width: 2em;
+    height: 2em;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+    margin: .25em
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+/* Set a specific color for each brand */
+
+/* Facebook */
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+
+/* Twitter */
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
+
+/* Instagram */
+.fa-instagram {
+    background: #125688;
+    color: white;
+}
+
+video {
+    display: none;
+}
+
+footer {
+    display: flex;
+    background-color: #000;
+    width: 100%;
+    height: 3.5em;
+    flex-direction: row;
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    align-items: center;
+    padding: 1em;
+    justify-content: space-between;
+    z-index: 9;
+}
+
+footer p {
+    font-size: .85em;
+    margin-left: .75em;
+}
+
+footer ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    color: white;
+    font-size: 1.2em;
+}
+
+.footerUL {
+    width: 50%;
+}
+
+.footerUL li {
+    margin: 0em .1em;
+}
+
+footer .fa {
+    padding: .5em;
+    font-size: 1em;
+    width: 2em;
+    height: 2em;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
+
+    .aboutArticle {
+        background-position: center -150px;
+        padding-bottom: -5em;
+    }
+
+    .aboutCard {
+        margin-top: 35%;
+    }
+
+    .faqCard {
+        margin-top: 35%;
+    }
+
+    footer p {
+        font-size: 1.25em;
+    }
+
+    .footerUL {
+        width: 30%;
+    }
+
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+
+    .aboutArticle:before {
+        content: '';
+        display: inline-block;
+        vertical-align: top;
+        height: 100%;
+    }
+
+    .aboutArticle {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: center;
+        background-position: left;
+
+    }
+
+    .aboutCard {
+        width: 40%;
+        margin-right: 2em;
+        margin-top: 2em;
+    }
+
+    .faqArticle {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        background-position: right;
+        background-size: cover;
+
+    }
+
+    .faqCard {
+        width: 40%;
+        margin-left: 2em;
+        margin-top: 2em;
+    }
+
+    .faqCard ~ .faqCard {
+        width: 40%;
+    }
+
+    footer p {
+        font-size: 1.25em;
+    }
+
+    .footerUL {
+        width: 20%;
+    }
+
+}
+
+
+@media only screen and (min-device-width: 1025px) and (-webkit-min-device-pixel-ratio: 1) {
+
+    /*
+
+
+
+    font-family: 'Cabin', sans-serif;
+
+    font-family: 'Quicksand', sans-serif;
+
+    font-family: 'Rubik', sans-serif;
+
+
+
+*/
+
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    html,
+    body {
+        height: 100%;
+        margin: 0 auto;
+        padding: 0;
+        width: 100%;
+    }
+
+    body {
+        max-width: 100%;
+        background-color: #000;
+    }
+
+    /* SHARE ICONS */
+
+    nav {
+        display: flex;
+        width: 100%;
+        height: 5em;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+        background: rgba(0, 0, 0, .5);
+        position: fixed;
+        transition: top 0.3s;
+        z-index: 2;
+        font-family: 'Rubik', sans-serif;
+    }
+
+    .share {
+        color: white;
+        font-family: 'Quicksand', sans-serif;
+        font-size: 1.2em
+    }
+
+    .fa {
+        padding: .5em;
+        font-size: 1.2em;
+        width: 2em;
+        height: 2em;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 50%;
+    }
+
+    .fa:hover {
+        opacity: 0.7;
+    }
+
+    /* Set a specific color for each brand */
+
+    /* Facebook */
+    .fa-facebook {
+        background: #3B5998;
+        color: white;
+    }
+
+    /* Twitter */
+    .fa-twitter {
+        background: #55ACEE;
+        color: white;
+    }
+
+    /* Instagram */
+    .fa-instagram {
+        background: #125688;
+        color: white;
+    }
+
+
+    ul {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        width: 20%;
+        list-style: none;
+        padding: .5em;
+    }
+
+    .navUL {
+        width: 50%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .shareUL {
+        width: 50%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+
+    .navLinks {
+        height: 100%;
+    }
+
+    .navLinks a {
+        text-decoration: none;
+        font-size: 1.5em;
+        color: #adadad;
+        text-transform: uppercase;
+    }
+
+    .navLinks a:hover {
+        color: #fff;
+    }
+
+    .image1 {
+        display: none;
+        height: 100%;
+        width: 100%;
+    }
+
+    .logo {
+        display: block;
+        font-size: 3em;
+        height: 2em;
+        width: 2em;
+        color: white;
+    }
+
+    .logo img {
+        color: #adadad;
+        fill: #adadad;
+    }
+
+    header {
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+
+    #mainNav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        position: fixed;
+        top: 0px;
+        width: 100%;
+        height: auto;
+        background: black;
+        font-family: 'Rubik', sans-serif;
+    }
+    
+    .wrap {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        background: none;
+    }
+
+    .heroImg {
+        width: 100%;
+        height: 100%;
+    }
+
+    .infoCard {
+        display: flex;
+        width: 25em;
+        height: 70%;
+        z-index: 0;
+        position: absolute;
+        top: 150px;
+        left: 75px;
+        background-image: url(img/covermin.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .infoCard p {
+        padding: 1em 0;
+    }
+
+    main {
+        height: 100%;
+        width: 100%;
+        z-index: 999;
+    }
+
+    .aboutArticle {
+        width: 100%;
+        height: 100%;
+        background-image: url(img/oceanmin.jpg);
+        background-size: cover;
+        background-position: 50% 0;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+
+    .aboutArticle:before {
+        content: '';
+        display: inline-block;
+        vertical-align: middle;
+        height: 100%;
+    }
+
+    .aboutCard {
+        display: inline-block;
+        vertical-align: middle;
+        width: 60%;
+        background-color: #CDE7E1;
+        padding: 2em 1em;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+        font-family: 'Cabin', sans-serif;
+        text-align: left;
+        margin-top: 0;
+    }
+
+    .background {
+        display: block;
+        position: relative;
+        overflow: hidden;
+        height: 100%;
+        width: 100%;
+        background: url("img/water2mincopy.jpg") 50% 50% no-repeat fixed;
+        padding: 20rem;
+        text-align: center;
+        z-index: -1;
+    }
+
+    .reveal {
+        display: block;
+        z-index: -1;
+        position: absolute;
+        top: calc(50% - 10rem);
+        left: calc(50% - 10rem);
+        width: 20rem;
+        height: 20rem;
+        background: url("img/water2minCursive.jpg") 50% 50% no-repeat fixed;
+        border-radius: 50%;
+        background-size: cover;
+        -webkit-mask-image: -webkit-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.9) 36%, rgba(255, 255, 255, 0) 90%);
+    }
+
+    .faqArticle {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        z-index: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-image: none;
+        background-color: rgb(0,0,0,0);
+    }
+
+    #bgvid {
+        display: block;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        height: auto;
+        z-index: -2;
+        -ms-transform: translateX(-50%) translateY(-50%);
+        -moz-transform: translateX(-50%) translateY(-50%);
+        -webkit-transform: translateX(-50%) translateY(-50%);
+        transform: translateX(-50%) translateY(-50%);
+        background: url(img/Playful.jpg) no-repeat;
+        background-size: cover;
+        overflow: hidden;
+    }
+
+    .faqCard {
+        display: inline-block;
+        vertical-align: middle;
+        width: 60%;
+        height: auto;
+        background-color: #CDE7E1;
+        padding: 1em;
+        margin: 1em;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+        font-family: 'Cabin', sans-serif;
+        text-align: left;
+        z-index: 0;
+    }
+
+    .faqCard ~ .faqCard {
+        width: 60%;
+        margin-top: 1em;
+    }
+
+    footer {
+        display: flex;
+        background-color: #000;
+        width: 100%;
+        height: 3.5em;
+        flex-direction: row;
+        color: white;
+        font-family: 'Quicksand', sans-serif;
+        align-items: center;
+        padding: 1em;
+        justify-content: space-between;
+        font-size: 1em;
+        z-index: 9;
+    }
+
+    .footerP {
+        font-size: 1.25em;
+    }
+
+    footer ul {
+        color: white;
+        font-size: 1em;
+    }
+
+    footer .fa {
+        padding: .5em;
+        font-size: 1em;
+        width: 2em;
+        height: 2em;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 50%;
+    }
+
+    .mobileMenu {
+        display: none;
+    }
+
+    .mobileDiv {
+        display: none;
+    }
+
+}
+
+
+/*
+@media screen and (min-width: 1024px) {
+
+    .navUL {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+
+    .navLinks {
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    .logo {
+        display: block;
+        font-size: 2em;
+        height: 2em;
+        width: 2em;
+        color: white;
+    }
+
+    .infoCard {
+        display: flex;
+        width: 40em;
+        max-width: 100%;
+        max-height: 100%;
+        margin: 0;
+        padding: 0;
+        background-size: contain;
+    }
+
+    .faqArticle {
+        height: 100%;
+    }
+
+    .background {
+        background-size: cover;
+    }
+
+    #bgvid {
+        background-size: cover;
+        top: 50%;
+    }
+
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 1800px) {
+
+    .wrap {
+        overflow: hidden;
+    }
+
+    .infoCard {
+
+        overflow: hidden;
+    }
+
+    #bgvid {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        overflow: hidden;
+    }
+
+}
+*/

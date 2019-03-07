@@ -1,0 +1,607 @@
+/*
+
+
+
+    font-family: 'Cabin', sans-serif;
+
+    font-family: 'Quicksand', sans-serif;
+
+    font-family: 'Rubik', sans-serif;
+
+
+
+*/
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+}
+
+body {
+    max-width: 100%;
+    background-color: #000;
+}
+
+/* SHARE ICONS */
+
+nav {
+    display: flex;
+    width: 100%;
+    height: 5em;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 0, 0, .5);
+    position: fixed;
+    transition: top 0.3s;
+    z-index: 2;
+    font-family: 'Rubik', sans-serif;
+}
+
+.share {
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.2em
+}
+
+.fa {
+    padding: .5em;
+    font-size: 1.2em;
+    width: 2em;
+    height: 2em;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+/* Set a specific color for each brand */
+
+/* Facebook */
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+
+/* Twitter */
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
+
+/* Instagram */
+.fa-instagram {
+    background: #125688;
+    color: white;
+}
+
+
+ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 20%;
+    list-style: none;
+    padding: .5em;
+}
+
+.navUL {
+    width: 30%;
+}
+
+.navLinks {
+    height: 100%;
+}
+
+.navLinks a {
+    text-decoration: none;
+    font-size: 1.5em;
+    color: #adadad;
+    text-transform: uppercase;
+}
+
+.navLinks a:hover {
+    color: #fff;
+}
+
+.image1 {
+    display: none;
+    height: 100%;
+    width: 100%;
+}
+
+.logo {
+    display: block;
+    font-size: 3em;
+    height: 2em;
+    width: 2em;
+    color: white;
+}
+
+.logo img {
+    color: #adadad;
+    fill: #adadad;
+}
+
+header {
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.wrap {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.heroImg {
+    width: 100%;
+    height: 100%;
+}
+
+.infoCard {
+    display: flex;
+    width: 25em;
+    height: 70%;
+    z-index: 0;
+    position: absolute;
+    top: 150px;
+    left: 75px;
+    background-image: url(img/covermin.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.infoCard p {
+    padding: 1em 0;
+}
+
+main {
+    height: 100%;
+    width: 100%;
+    z-index: 999;
+}
+
+.aboutArticle {
+    width: 100%;
+    height: 100%;
+    background-image: url(img/oceanmin.jpg);
+    background-size: cover;
+    background-position: 50% 0;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.aboutArticle:before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+}
+
+.aboutCard {
+    display: inline-block;
+    vertical-align: middle;
+    width: 60%;
+    background-color: #CDE7E1;
+    padding: 2em 1em;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    font-family: 'Cabin', sans-serif;
+    text-align: left;
+}
+
+.background {
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    background: url("img/water2mincopy.jpg") 50% 50% no-repeat fixed;
+    padding: 20rem;
+    text-align: center;
+    z-index: -1;
+}
+
+.reveal {
+    z-index: -1;
+    position: absolute;
+    top: calc(50% - 10rem);
+    left: calc(50% - 10rem);
+    width: 20rem;
+    height: 20rem;
+    background: url("img/water2minCursive.jpg") 50% 50% no-repeat fixed;
+    border-radius: 50%;
+    background-size: cover;
+    -webkit-mask-image: -webkit-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.9) 36%, rgba(255, 255, 255, 0) 90%);
+}
+
+.faqArticle {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    z-index: 9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#bgvid {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    z-index: -100;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background: url(img/Playful.jpg) no-repeat;
+    background-size: cover;
+}
+
+.faqCard {
+    display: inline-block;
+    vertical-align: middle;
+    width: 60%;
+    height: auto;
+    background-color: #CDE7E1;
+    padding: 1em;
+    margin: 1em;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    font-family: 'Cabin', sans-serif;
+    text-align: left;
+    z-index: 0;
+}
+
+footer {
+    display: flex;
+    background-color: #000;
+    width: 100%;
+    height: 3.5em;
+    flex-direction: row;
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    align-items: center;
+    padding: 1em;
+    justify-content: space-between;
+    z-index: 9;
+}
+
+footer ul {
+    color: white;
+    font-size: 1.2em;
+}
+
+footer .fa {
+    padding: .5em;
+    font-size: 1em;
+    width: 2em;
+    height: 2em;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+}
+
+.mobileMenu {
+    display: none;
+}
+
+
+@media screen and (min-width: 1024px) {
+
+    .navUL {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+
+    .navLinks {
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    .logo {
+        display: block;
+        font-size: 2em;
+        height: 2em;
+        width: 2em;
+        color: white;
+    }
+
+    .infoCard {
+        display: flex;
+        width: 40em;
+        max-width: 100%;
+        max-height: 100%;
+        margin: 0;
+        padding: 0;
+        background-size: contain;
+    }
+
+    .faqArticle {
+        height: 100%;
+    }
+
+    .background {
+        background-size: cover;
+    }
+
+    #bgvid {
+        background-size: cover;
+        top: 50%;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+
+
+    /*
+
+    font-family: 'Cabin', sans-serif;
+
+    font-family: 'Quicksand', sans-serif;
+
+    font-family: 'Rubik', sans-serif;
+
+*/
+
+    header {
+        max-width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .reveal {
+        display: none;
+    }
+
+    .mobileDiv {
+        width: 100%;
+        height: 75px;
+        background: black;
+        position: fixed;
+        z-index: 5;
+        top: 0;
+    }
+
+    .mobileMenu {
+        display: block;
+        color: slategrey;
+    }
+
+    #mainNav {
+        display: none;
+        flex-direction: row;
+        justify-content: space-around;
+        position: fixed;
+        top: 70px;
+        width: 100%;
+        height: auto;
+        background: black;
+        font-family: 'Rubik', sans-serif;
+    }
+
+    .navUL {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .shareUL {
+        display: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+    }
+
+    .navLinks {
+
+        height: auto;
+        margin: .5em;
+    }
+
+    .navLinks a {
+        text-decoration: none;
+        font-size: 1.5em;
+        color: #adadad;
+        text-transform: uppercase;
+    }
+
+    .reveal {
+        display: none;
+    }
+
+    .wrap {
+        width: 100%;
+        height: 100vh;
+        display: block;
+        flex-direction: column;
+        justify-content: center;
+        background-image: url(img/coverminBlur.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        
+    }
+
+    .background {
+        display: none;
+    }
+
+    .infoCard {
+        display: block;
+        width: 100%;
+        position: static;
+        background-image: url(img/covermin.jpg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        margin-top: 150px;
+    }
+
+    main {
+        width: 100%;
+        height: auto;
+        z-index: auto;
+    }
+
+    .aboutArticle {
+        width: 100%;
+        height: 100%;
+        background-color: #07462b;
+        background-image: url(img/droneMobileMin.jpg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: top;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        padding-bottom: 2em;
+    }
+
+    .aboutCard {
+        width: 90%;
+        margin-top: 70%;
+    }
+
+    .faqArticle {
+        width: 100%;
+        height: 100%;
+        background-color: #333333;
+        background-image: url(img/hummingbirdMobileMin.jpg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: top;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        padding-bottom: 2em;
+    }
+
+    .faqCard {
+        width: 90%;
+        margin: auto;
+        margin-top: 70%;
+    }
+
+    .faqCard ~ .faqCard {
+        width: 90%;
+        margin-top: 1em;
+    }
+
+    /* SHARE ICONS */
+
+    .share {
+        color: white;
+        font-family: 'Quicksand', sans-serif;
+        font-size: 1.5em;
+    }
+
+    .fa {
+        padding: .5em;
+        font-size: 2em;
+        width: 2em;
+        height: 2em;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 50%;
+        margin: .25em
+    }
+
+    .fa:hover {
+        opacity: 0.7;
+    }
+
+    /* Set a specific color for each brand */
+
+    /* Facebook */
+    .fa-facebook {
+        background: #3B5998;
+        color: white;
+    }
+
+    /* Twitter */
+    .fa-twitter {
+        background: #55ACEE;
+        color: white;
+    }
+
+    /* Instagram */
+    .fa-instagram {
+        background: #125688;
+        color: white;
+    }
+
+    video {
+        display: none;
+    }
+
+    footer {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+
+    footer p {
+        font-size: 1.2em;
+    }
+
+    .footerUL {
+        width: 50%;
+    }
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 1800px) {
+
+    .wrap {
+        overflow: hidden;
+    }
+    
+    .infoCard {
+        
+        overflow: hidden;
+    }
+    
+    #bgvid {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        overflow: hidden;
+    }
+
+}

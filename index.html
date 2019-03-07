@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Cabin|Quicksand|Rubik:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="stylesMob.css">
+
+    <title>Under Pressure</title>
+
+</head>
+
+<body>
+
+    <header>
+
+        <div class="mobileDiv">
+            <a class="mobileMenu" href="javascript:void(0);" onclick="myFunction()"><i class="fa fa-bars" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        <nav id="mainNav">
+
+            <ul class="navUL">
+                
+                <a class="logo" href="#home"><img src="img/logo3.svg" alt=""></a>
+                <li class="navLinks"><a href="#home">Home</a></li>
+                <li class="navLinks"><a href="#about">About</a></li>
+                <li class="navLinks"><a href="#faq">FAQ</a></li>
+                <li class="navLinks"><a href="#faq">Contact</a></li>
+
+            </ul>
+
+            <ul class="shareUL">
+
+                <li>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.underpressure.com" target="_blank" rel="noopener" class="fa fa-facebook"></a>
+                <li>
+
+                <li>
+                    <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="fa fa-twitter" data-show-count="false" target="_blank"></a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                <li>
+
+            </ul>
+
+        </nav>
+
+
+
+        <div class="wrap" id="home">
+
+            <div class="background">
+                <div class="reveal"></div>
+            </div>
+
+            <div class="infoCard">
+
+
+
+            </div>
+
+        </div>
+
+
+
+    </header>
+
+
+
+    <main>
+       
+        <article class="aboutArticle" id="about">
+
+            <section class="aboutCard">
+
+                <h2>Based on the debut novel by Christabel H. Parker:</h2>
+                <br>
+                <p>In the year 2026, SCUBA diver and whale watcher Flynn McConnell takes a marine research team off shore her dive mission suddenly turns hellish with creatures dying and in distress all around her. Returning to the surface she finds a global catastrophe; the atmosphere is unbreathable, the passengers on her boat are dead, all life it seems has perished. Is it terrorists, a climate cataclysm? There are two missed calls from her doting fiancee and no one is responding to her urgent calls for help. The global media and social media are silent. </p>
+
+                <br>
+
+                <p>With just two air tanks left, each breath brings Flynn closer to her own doom. Flynn is in a race against time like no other to survive. When she and two other survivors find a ten year old girl - they travel to the only signs of life  deep within the mountains of Montana - but what they uncover there pushes four souls to the edge, revealing their secrets and the question; did these four strangers survive for a reason?</p>
+
+                <br>
+
+            </section>
+
+
+        </article>
+
+        <article class="faqArticle" id="faq">
+
+            <video playsinline autoplay muted loop poster="img/Playful.jpg" id="bgvid">
+                <source src="img/Playful.webm" type="video/webm">
+                <source src="img/Playful.mp4" type="video/mp4">
+            </video>
+
+            <section class="faqCard">
+
+                <h2>FAQ</h2>
+                <br>
+                <p><strong>Will Under Pressure be released for sale?</strong></p>
+                <p>Under Pressure will be released for sale May 2019. Will a copy find you?</p>
+                <br>
+                <p><strong>Is Under Pressure based on a real story?</strong></p>
+                <p>We'll see.</p>
+                <br>
+                <p><strong>Are Sparticles real?</strong></p>
+                <p>Yes.</p>
+                <br>
+                <p><strong>Who is Christabel H Parker?</strong></p>
+                <p>Christabel H. Parker is an Australian television producer who resides in the wilds of Ontario, Canada. C.H. Parker began her career in Australia's national broadcaster working for ABCTV news and produced popular television series for Channel channels Seven and Nine. She was a roving reporter for Newscorp and a Walkley Award judge. She's married to Canadian rock musician and inspirational speaker Carl Dixon.</p>
+                <br>
+                <p><strong>Is the character Hilton R Davies based on Donald Trump?</strong></p>
+                <p>Not specifically.</p>
+
+            </section>
+
+            <section class="faqCard">
+
+                <h2>Contact</h2>
+                <br>
+                <p>We would love to hear from you! <a  class="emailP" href="mailto:hello@diamondfilms.org">Email us here!</a></p>
+                
+
+            </section>
+
+        </article>
+
+
+
+        <footer>
+
+            <p class="footerP">Under Pressure &copy; 2018</p>
+
+            <ul class="footerUL">
+
+                <li>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.underpressure.com" class="fa fa-facebook"></a>
+                <li>
+
+                <li>
+                    <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="fa fa-twitter" data-show-count="false" target="_blank"></a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                <li>
+
+            </ul>
+
+        </footer>
+
+    </main>
+
+
+    <script src="main.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/jquery.ripples.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+        $('.aboutArticle').ripples({
+            resolution: 512,
+            dropRadius: 20, //px
+            perturbance: 0.04,
+        });
+    </script>
+
+</body>
+
+</html>
